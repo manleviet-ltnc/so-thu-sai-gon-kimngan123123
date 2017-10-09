@@ -18,3 +18,23 @@ C:\Users\User\Documents\GitHub\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon
 C:\Users\User\Documents\GitHub\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\GitHub\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.exe
 C:\Users\User\Documents\GitHub\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.pdb
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\bin\Debug\SothuXiGon.exe.config
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\bin\Debug\SothuXiGon.exe
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\bin\Debug\SothuXiGon.pdb
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.csprojResolveAssemblyReference.cache
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.Form1.resources
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.Properties.Resources.resources
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.csproj.GenerateResource.Cache
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.csproj.CoreCompileInputs.cache
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.exe
+C:\Users\thuchanh\Documents\kim ngân\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.pdb
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\bin\Debug\SothuXiGon.exe.config
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\bin\Debug\SothuXiGon.exe
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\bin\Debug\SothuXiGon.pdb
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.csprojResolveAssemblyReference.cache
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.Form1.resources
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.Properties.Resources.resources
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.csproj.GenerateResource.Cache
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.csproj.CoreCompileInputs.cache
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.exe
+C:\Users\thuchanh\GitHub\so-thu-sai-gon-kimngan123123\SothuXiGon\SothuXiGon\obj\Debug\SothuXiGon.pdb

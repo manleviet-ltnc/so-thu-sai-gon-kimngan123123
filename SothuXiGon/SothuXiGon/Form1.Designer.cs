@@ -34,23 +34,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lstThuMoi = new System.Windows.Forms.ListBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.bộSườngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.sửaĐổiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lstDanhSach = new System.Windows.Forms.ListBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.mnuLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.sửaĐổiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCopy = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPaste = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lstDanhSach = new System.Windows.Forms.ListBox();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,9 +81,25 @@
             this.lstThuMoi.FormattingEnabled = true;
             this.lstThuMoi.Location = new System.Drawing.Point(3, 16);
             this.lstThuMoi.Name = "lstThuMoi";
-            this.lstThuMoi.Size = new System.Drawing.Size(167, 176);
+            this.lstThuMoi.Size = new System.Drawing.Size(167, 177);
             this.lstThuMoi.TabIndex = 5;
             this.toolTip1.SetToolTip(this.lstThuMoi, "Ấn chuột và kéo sang Danh sách thú để tạo Sở thú");
+            this.lstThuMoi.DragEnter += new System.Windows.Forms.DragEventHandler(this.Listbox_DragEnter);
+            this.lstThuMoi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ListBox_MouseDown);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.ImageIndex = 0;
+            this.btnSave.ImageList = this.imageList1;
+            this.btnSave.Location = new System.Drawing.Point(320, 228);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(24, 21);
+            this.btnSave.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.btnSave, "Lưu danh sách con thú vào file danhsachthu.txt");
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.Save);
             // 
             // imageList1
             // 
@@ -112,93 +129,6 @@
             this.bộSườngToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.bộSườngToolStripMenuItem.Text = "Hồ Sơ";
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
-            // 
-            // sửaĐổiToolStripMenuItem
-            // 
-            this.sửaĐổiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuCopy,
-            this.mnuCat,
-            this.mnuPaste});
-            this.sửaĐổiToolStripMenuItem.Name = "sửaĐổiToolStripMenuItem";
-            this.sửaĐổiToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.sửaĐổiToolStripMenuItem.Text = "Sửa đổi";
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lstDanhSach, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lstThuMoi, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblTime, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.btnXoa, 0, 3);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 24);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 253);
-            this.tableLayoutPanel2.TabIndex = 7;
-            // 
-            // lstDanhSach
-            // 
-            this.lstDanhSach.AllowDrop = true;
-            this.lstDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstDanhSach.FormattingEnabled = true;
-            this.lstDanhSach.Location = new System.Drawing.Point(176, 16);
-            this.lstDanhSach.Name = "lstDanhSach";
-            this.lstDanhSach.Size = new System.Drawing.Size(168, 176);
-            this.lstDanhSach.TabIndex = 6;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.tableLayoutPanel2.SetColumnSpan(this.lblTime, 2);
-            this.lblTime.Location = new System.Drawing.Point(3, 195);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(88, 13);
-            this.lblTime.TabIndex = 7;
-            this.lblTime.Text = "Bây giờ là_ngày_";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.ImageIndex = 0;
-            this.btnSave.ImageList = this.imageList1;
-            this.btnSave.Location = new System.Drawing.Point(320, 227);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(24, 21);
-            this.btnSave.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.btnSave, "Lưu danh sách con thú vào file danhsachthu.txt");
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.Save);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Image = global::SothuXiGon.Properties.Resources.dừng;
-            this.btnXoa.Location = new System.Drawing.Point(3, 227);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(36, 23);
-            this.btnXoa.TabIndex = 9;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
             // mnuLoad
             // 
             this.mnuLoad.Image = global::SothuXiGon.Properties.Resources.tải_xuống__1_;
@@ -216,6 +146,11 @@
             this.mnuSave.Text = "Lưu danh sách";
             this.mnuSave.Click += new System.EventHandler(this.Save);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
+            // 
             // mnuClose
             // 
             this.mnuClose.Image = global::SothuXiGon.Properties.Resources.tải_xuống;
@@ -223,6 +158,17 @@
             this.mnuClose.Size = new System.Drawing.Size(191, 22);
             this.mnuClose.Text = "Kết thúc";
             this.mnuClose.Click += new System.EventHandler(this.mnuClose_Click);
+            // 
+            // sửaĐổiToolStripMenuItem
+            // 
+            this.sửaĐổiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuCopy,
+            this.mnuCat,
+            this.mnuPaste,
+            this.xóaToolStripMenuItem});
+            this.sửaĐổiToolStripMenuItem.Name = "sửaĐổiToolStripMenuItem";
+            this.sửaĐổiToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.sửaĐổiToolStripMenuItem.Text = "Sửa đổi";
             // 
             // mnuCopy
             // 
@@ -248,11 +194,79 @@
             this.mnuPaste.Size = new System.Drawing.Size(136, 22);
             this.mnuPaste.Text = "Dán";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lstDanhSach, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lstThuMoi, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblTime, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnXoa, 0, 3);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 24);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(347, 254);
+            this.tableLayoutPanel2.TabIndex = 7;
+            // 
+            // lstDanhSach
+            // 
+            this.lstDanhSach.AllowDrop = true;
+            this.lstDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstDanhSach.FormattingEnabled = true;
+            this.lstDanhSach.Location = new System.Drawing.Point(176, 16);
+            this.lstDanhSach.Name = "lstDanhSach";
+            this.lstDanhSach.Size = new System.Drawing.Size(168, 177);
+            this.lstDanhSach.TabIndex = 6;
+            this.lstDanhSach.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstDanhSach_DragDrop);
+            this.lstDanhSach.DragEnter += new System.Windows.Forms.DragEventHandler(this.Listbox_DragEnter);
+            this.lstDanhSach.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ListBox_MouseDown);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.lblTime, 2);
+            this.lblTime.Location = new System.Drawing.Point(3, 196);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(88, 13);
+            this.lblTime.TabIndex = 7;
+            this.lblTime.Text = "Bây giờ là_ngày_";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = global::SothuXiGon.Properties.Resources.dừng;
+            this.btnXoa.Location = new System.Drawing.Point(3, 228);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(59, 23);
+            this.btnXoa.TabIndex = 9;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 277);
+            this.ClientSize = new System.Drawing.Size(347, 278);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -261,6 +275,7 @@
             this.MinimumSize = new System.Drawing.Size(363, 316);
             this.Name = "Form1";
             this.Text = "Sở Thú Xì Gòn";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -294,6 +309,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
     }
 }
 

@@ -53,7 +53,7 @@ namespace SothuXiGon
                     if (dt == st)
                         test = true;
                 }
-                if (test = false)
+                if (test == false)
                 {
                     int newindex = lstDanhSach.IndexFromPoint(lstDanhSach.PointToClient(new Point(e.X, e.Y)));
                     lstDanhSach.Items.Remove(e.Data.GetData(DataFormats.Text));
@@ -67,7 +67,7 @@ namespace SothuXiGon
                 }
             }
         }
-
+        bool isSave = false;
         private void Save(object sender, EventArgs e)
         {
             //Mở tệp tin
@@ -129,6 +129,25 @@ namespace SothuXiGon
         private void btnXoa_Click(object sender, EventArgs e)
         {
             lstDanhSach.Items.Remove(lstDanhSach.SelectedItem);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isSave == false)
+            {
+                DialogResult kq = MessageBox.Show("Bạn có muốn lưu danh sách?", "Thông báo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                if (kq == DialogResult.Yes)
+                {
+                    Save(sender, e);
+                    e.Cancel = false;
+                }
+                else if (kq == DialogResult.No)
+                    e.Cancel = false;
+                else
+                    e.Cancel = false;
+            }
+            else
+                mnuClose_Click(sender, e);
         }
     }
 }
